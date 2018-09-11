@@ -14,3 +14,4 @@ if choice == "C":
               "scripts\\compatchk.ps1"], 
               stdout=sys.stdout)
 	p.communicate()
+	
