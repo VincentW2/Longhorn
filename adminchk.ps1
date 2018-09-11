@@ -1,9 +1,6 @@
 #Requires -RunAsAdministrator
 
-$strString = "You are ready to use Windows 10"
-write-host $strString
+Set-ExecutionPolicy Unrestricted
+Write-Output "You are ready"
 
-function ftest{
-$test = "Test"
-write-host $test
 }
