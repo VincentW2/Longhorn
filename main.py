@@ -16,8 +16,6 @@ if choice == "B":
 
 if choice == "C":
 	p = subprocess.Popen(["powershell.exe",
-			  'ExecutionPolicy'
-			  'Unrestricted'
               "scripts\\compatchk.ps1"], 
               stdout=sys.stdout)
 	p.communicate()
