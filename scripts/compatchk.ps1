@@ -1,9 +1,3 @@
 #Requires -RunAsAdministrator
-
-$strString = "Hello World"
-write-host $strString
-
-function ftest{
-$test = "Test"
-write-host $test
-}
+Set-ExecutionPolicy Unrestricted
+"You are ready to debloat Windows 10"
