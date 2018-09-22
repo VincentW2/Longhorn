@@ -36,6 +36,12 @@ def longhorn():
 	            stdout=sys.stdout)
 			p.communicate()
 
+		if choice == "RS": 
+			p = subprocess.Popen(["powershell.exe",
+	            "scripts\\disable-services.ps1"], 
+	            stdout=sys.stdout)
+			p.communicate()
+
 		if choice == "S":
 			p = subprocess.Popen(["powershell.exe",
 				'-ExecutionPolicy', 
