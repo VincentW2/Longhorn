@@ -8,7 +8,7 @@
 # Please see the related issue:
 # <https://github.com/W4RH4WK/Debloat-Windows-10/issues/79>
 
-Import-Module -DisableNameChecking $PSScriptRoot\..\lib\force-mkdir.psm1
+Import-Module -DisableNameChecking $PSScriptRoot\..\utilities\force-mkdir.psm1
 
 Write-Output "Disabling telemetry via Group Policies"
 force-mkdir "HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection"
@@ -190,7 +190,7 @@ $domains = @(
     # can cause issues with Skype (#79)
     "apps.skype.com"
     "c.msn.com"
-    "login.live.com"
+   #"login.live.com"    # causes issues with logging into hotmail
     "pricelist.skype.com"
     "s.gateway.messenger.live.com"
     "ui.skype.com"
