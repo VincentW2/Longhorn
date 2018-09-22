@@ -2,13 +2,11 @@ def longhorn():
 
 	import subprocess, sys, os, shutil
 
-	print("Make Sure This is Running As Admin!")
-	print("What would you like to do?")
+	print("MAKE SURE THIS IS RUNNING AS ADMIN")
 	print("[B] - Block Telemetry")
-	print("[C] - Compatibility Check")
-	print("[D] - Full Debloat")
+	print("[O] - Remove Onedrive")
+	print("[S] - Setup Longhorn")
 	print("[X] - Exit")
-	print("Type ""help (letter)"" to see what a command does")
 	while True:
 		choice = input("> ")
 
@@ -18,16 +16,16 @@ def longhorn():
 				stdout=sys.stdout)
 			p.communicate()
 
-		elif choice == "C":
-			p = subprocess.Popen(["powershell.exe",
-	            "scripts\\compatchk.ps1"], 
-	             stdout=sys.stdout)
-			p.communicate()
-
-		if choice == "O":
+		if choice == "O": 
 			p = subprocess.Popen(["powershell.exe",
 	            "scripts\\remove-onedrive.ps1"], 
 	            stdout=sys.stdout)
+			p.communicate()
+
+		if choice == "S":
+			p = subprocess.Popen(["powershell.exe",
+	            "scripts\\compatchk.ps1"], 
+	             stdout=sys.stdout)
 			p.communicate()
 
 		if choice == "X":
