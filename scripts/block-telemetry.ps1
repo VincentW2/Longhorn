@@ -8,7 +8,7 @@
 # Please see the related issue:
 # <https://github.com/W4RH4WK/Debloat-Windows-10/issues/79>
 
-Import-Module -DisableNameChecking $PSScriptRoot\..\utilities\force-mkdir.psm1
+Import-Module -DisableNameChecking \utilities\force-mkdir.psm1
 
 Write-Output "Disabling telemetry via Group Policies"
 force-mkdir "HKLM:\SOFTWARE\Policies\Microsoft\Windows\DataCollection"
