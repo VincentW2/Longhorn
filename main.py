@@ -4,6 +4,7 @@ def longhorn():
 
 	print("MAKE SURE THIS IS RUNNING AS ADMIN")
 	print("[B] - Block Telemetry")
+	print("[C] - Remove Cortana")
 	print("[O] - Remove Onedrive")
 	print("[S] - Setup Longhorn")
 	print("[X] - Exit")
@@ -16,6 +17,10 @@ def longhorn():
 				stdout=sys.stdout)
 			p.communicate()
 
+		if choice == "C":
+			os.startfile("scripts\\delCortana.bat")
+			print("Please run [C] twice for it to take full effect.\n")
+
 		if choice == "O": 
 			p = subprocess.Popen(["powershell.exe",
 	            "scripts\\remove-onedrive.ps1"], 
@@ -24,7 +29,9 @@ def longhorn():
 
 		if choice == "S":
 			p = subprocess.Popen(["powershell.exe",
-	            "scripts\\compatchk.ps1"], 
+				'-ExecutionPolicy', 
+				'Unrestricted',
+	            "scripts\\setup.ps1"], 
 	             stdout=sys.stdout)
 			p.communicate()
 
