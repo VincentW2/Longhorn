@@ -1,3 +1,6 @@
+![Longhorn Logo](http://repo.vinlark.info/longhorn/longhorn.png)
+
+
 ## Liability
 
 **Longhorn is provided as is and you use it at your own risk.**
