@@ -1,9 +1,16 @@
 ![Longhorn Logo](http://repo.vinlark.info/longhorn/longhorn.png)
 
 Longhorn is a windows debloater made in python using powershell scripts. Longhorn was made to run with as little user interaction as possible, all from the included python file and scripts.
+
 Longhorn can do these things:
-Remove Cortana
-Remove Onedrive
+
+-Block Windows Telemetry
+
+-Remove Cortana
+
+-Remove Onedrive
+
+-Setup Powershell to run files (also known as Setting up Longhorn)
 
 
 ## Liability
