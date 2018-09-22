@@ -7,6 +7,7 @@ def longhorn():
 	print("[B] - Block Telemetry")
 	print("[C] - Compatibility Check")
 	print("[D] - Full Debloat")
+	print("[X] - Exit")
 	print("Type ""help (letter)"" to see what a command does")
 	while True:
 		choice = input("> ")
@@ -28,6 +29,9 @@ def longhorn():
 	            "scripts\\remove-onedrive.ps1"], 
 	            stdout=sys.stdout)
 			p.communicate()
+
+		if choice == "X":
+			exit()
 
 
 
