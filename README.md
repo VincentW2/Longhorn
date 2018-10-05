@@ -1,4 +1,4 @@
-![Longhorn Logo](http://repo.vinlark.info/longhorn/longhorn.png)
+![Longhorn Logo](http://repo.vinlark.info/longhorn/longhorn-logo.png)
 
 Longhorn is a windows debloater made in python using powershell scripts. Longhorn was made to run with as little user interaction as possible, all from the included python file and scripts.
 
