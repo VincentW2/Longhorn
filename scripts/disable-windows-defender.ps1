@@ -3,7 +3,7 @@
 # reboot, run it again (this time no errors should occur) followed by another
 # reboot.
 
-Import-Module -DisableNameChecking $PSScriptRoot\..\lib\force-mkdir.psm1
+Import-Module -DisableNameChecking $PSScriptRoot\lib\force-mkdir.psm1
 Import-Module -DisableNameChecking $PSScriptRoot\lib\take-own.psm1
 
 
