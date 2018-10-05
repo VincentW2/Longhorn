@@ -11,7 +11,7 @@ Longhorn can do these things:
 * Remove Onedrive
 * Setup Powershell to run files (also known as Setting up Longhorn)
 
-Longhorn has been tested on Windows 10 Build 1709 on a wide range of hardware. Your milage may vary while using lower or igher build numbers.
+Longhorn has been tested on Windows 10 Build 1709 on a wide range of hardware. Your mileage may vary while using lower or igher build numbers.
 
 ## Liability
 
