@@ -59,8 +59,6 @@ def longhorn():
 		if choice == "X":
 			exit()
 
-
-
 		else:
 			longhorn()
 longhorn()
