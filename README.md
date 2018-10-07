@@ -14,6 +14,7 @@ Longhorn can do these things:
 Longhorn has been tested on Windows 10 Build 1709 on a wide range of hardware. Your mileage may vary while using lower or higher build numbers.
 
 ## Liability
+**There is NO undo to these scripts. Please set a restore point before you run Longhorn!**
 
 **Longhorn is provided as is and you use it at your own risk.**
 
