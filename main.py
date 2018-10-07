@@ -10,6 +10,7 @@ def longhorn():
 	print("[O] - Remove Onedrive")
 	print("[RS] - Disable Intrusive Services")
 	print("[S] - Setup Longhorn")
+	print("[U] - Disable Windows Update")
 	print("[X] - Exit")
 	while True:
 		choice = input("> ")
@@ -54,6 +55,12 @@ def longhorn():
 				'Unrestricted',
 	            "scripts\\setup.ps1"], 
 	             stdout=sys.stdout)
+			p.communicate()
+
+		if choice == "U":
+			p = subprocess.Popen(["powershell.exe",
+	            "scripts\\disable-windows-update.ps1"], 
+	            stdout=sys.stdout)
 			p.communicate()
 
 		if choice == "X":
