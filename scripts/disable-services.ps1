@@ -15,6 +15,8 @@ $services = @(
     "RemoteRegistry"                           # Remote Registry
     "SharedAccess"                             # Internet Connection Sharing (ICS)
     "SysMain"                                  # Superfetch
+    "stisvc"                                   # Windows Image Acquisition (WIA) 
+    "TabletInputService"                       # Touch Keyboard and Handwriting Service
     "TrkWks"                                   # Distributed Link Tracking Client
     "WbioSrvc"                                 # Windows Biometric Service
     #"WlanSvc"                                 # WLAN AutoConfig
