@@ -1,12 +1,13 @@
 def longhorn():
 
-	import subprocess, sys, os, shutil
+	import subprocess, sys, os, shutil, platform
 
 	print("MAKE SURE THIS IS RUNNING AS ADMIN")
 	print("[A] - Remove Default Apps")
 	print("[B] - Block Telemetry")
 	print("[C] - Remove Cortana")
 	print("[D] - Disable Windows Defender")
+	print("[I] - Check Windows Info")
 	print("[O] - Remove Onedrive")
 	print("[RS] - Disable Intrusive Services")
 	print("[S] - Setup Longhorn")
@@ -36,6 +37,11 @@ def longhorn():
 				"scripts\\disable-windows-defender.ps1"],
 				stdout=sys.stdout)
 			p.communicate()
+
+		if choice == "I":
+			print("----------Windows Info------------")
+			import platform as p; print(p.platform());print(p.processor())
+			print("----------------------------------")
 
 		if choice == "O": 
 			p = subprocess.Popen(["powershell.exe",
