@@ -29,7 +29,7 @@ def longhorn():
 			p.communicate()
 
 		if choice == "C":
-			os.startfile("scripts\\delCortana.bat")
+			p = subprocess.Popen(["scripts\\delCortana.exe"])
 			print("Please run [C] twice for it to take full effect.\n")
 
 		if choice == "D":
