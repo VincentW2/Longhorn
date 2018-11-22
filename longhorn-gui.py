@@ -2,8 +2,7 @@ from GUI import Window, Button, RadioGroup, RadioButton, \
     application
 from GUI.Alerts import alert, alert2, alert3, note_alert, stop_alert, \
     ask, confirm, ask_or_cancel, confirm_or_cancel
-from GUI import Window, View, Image, application
-from GUI.Geometry import offset_rect, rect_sized
+
 
 print("If you see this, running it works.")
 
@@ -64,6 +63,18 @@ def exit():
 	exit()
 
 win = Window(title = "Longhorn v2.0")
+
+
+
+win.show()
+
+
+
+
+application().run()
+
+
+
 
 
 
