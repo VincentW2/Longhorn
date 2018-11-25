@@ -12,12 +12,11 @@ Longhorn can do these things:
 * Remove Onedrive
 * Setup Powershell to run files (also known as Setting up Longhorn)
 
-Longhorn has been tested on Windows 10 Build 1709 on a wide range of hardware. Your mileage may vary while using lower or higher build numbers.
+Longhorn has been tested on Windows 10 Build 1709 and Windows 10 1803 on a wide range of hardware. Your mileage may vary while using lower or higher version numbers.
 
 ## Notice
-Please download all available updates before running this script. If you do not want to update from your current build. Defer feature updates for 365 days, and download all cumulative updates. Then disable Windows Update with Longhorn if you wish.
-![Advanced Settings](https://cdn.discordapp.com/attachments/456221994074112028/509484692505100325/unknown.png)
-![Feature updates](https://cdn.discordapp.com/attachments/456221994074112028/509484775547863060/unknown.png)
+Please download all available updates before running this script. If you do not want to update from your current build. Defer feature updates for 365 days in Windows Update > Advanced Settings, and download all cumulative updates. Then disable Windows Update if you wish.
+
 
 ## Liability
 **There is NO undo to these scripts. Please set a restore point before you run Longhorn!**
