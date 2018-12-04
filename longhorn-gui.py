@@ -1,5 +1,5 @@
 import subprocess, sys, os, shutil, platform
-from GUI import Window, Button, Label, RadioGroup, RadioButton, \
+from GUI import Window, Button, Label, \
     application
 from GUI.Alerts import alert, alert2, alert3, note_alert, stop_alert, \
     ask, confirm, ask_or_cancel, confirm_or_cancel
@@ -16,30 +16,40 @@ def defaultapps():
 		"scripts\\remove-default-apps.ps1"],
 		stdout=sys.stdout)
 	p.communicate()
+	note_alert("Default Apps Removed Successfully")
+
 
 def defender():
 	p = subprocess.Popen(["powershell.exe",
 		"scripts\\disable-windows-defender.ps1"],
 		stdout=sys.stdout)
 	p.communicate()
+	note_alert("Windows Defender Disabled Successfully")
+
 
 def onedrive():
 	p = subprocess.Popen(["powershell.exe",
 		"scripts\\remove-onedrive.ps1"], 
 		stdout=sys.stdout)
 	p.communicate()
+	note_alert("Onedrive Uninstalled Sucessfully")
+
 
 def telemetry():
 	p = subprocess.Popen(["powershell.exe",
 		"scripts\\block-telemetry.ps1"],
 		stdout=sys.stdout)
 	p.communicate()
+	note_alert("Telemetry Blocked Successfully")
+
 
 def services():
 	p = subprocess.Popen(["powershell.exe",
        "scripts\\disable-services.ps1"], 
 		stdout=sys.stdout)
 	p.communicate()
+	note_alert("Intrusive Services Disabled Successfully")
+
 
 def setup():
 	p = subprocess.Popen(["powershell.exe",
@@ -48,11 +58,13 @@ def setup():
 		"scripts\\setup.ps1"], 
 		stdout=sys.stdout)
 	p.communicate()
+	note_alert("You are now ready to debloat Windows 10")
 
 def wininfo():
 	print("----------Windows Info------------")
 	import platform as p; print(p.platform());print(p.processor())
 	print("----------------------------------")
+	note_alert(p.platform())
 
 def winupdate():
 	p = subprocess.Popen(["powershell.exe",
@@ -73,6 +85,7 @@ bt = [
     Button("Disable Intrusive Services", action = services),
     Button("Setup Longhorn", action = setup),
     Button("Disable Windows Update", action = winupdate),
+    Button("Windows Information", action = wininfo),
     Button("Exit Longhorn", action = exit),
 ]
 lbl = Label("""Longhorn v2.0
