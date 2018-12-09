@@ -1,15 +1,14 @@
 import subprocess, sys, os, shutil, platform
 from GUI import Window, Button, Label, \
     application
-from GUI.Alerts import alert, alert2, alert3, note_alert, stop_alert, \
+from GUI.Alerts import note_alert, stop_alert, \
     ask, confirm, ask_or_cancel, confirm_or_cancel
-
-
-print("If you see this, running it works.")
 
 def cortana():
 	p = subprocess.Popen(["scripts\\delCortana.exe"])
 	print("Please run [C] twice for it to take full effect.\n")
+	note_alert("Cortana Removed Successfully")
+
 
 def defaultapps():
 	p = subprocess.Popen(["powershell.exe",
@@ -73,7 +72,7 @@ def winupdate():
 	p.communicate()
 
 def exit():
-	exit()
+	os._exit(0)
 
 win = Window(title = "Longhorn v2.0")
 bt = [
@@ -88,7 +87,8 @@ bt = [
     Button("Windows Information", action = wininfo),
     Button("Exit Longhorn", action = exit),
 ]
-lbl = Label("""Longhorn v2.0
+lbl = Label("""RUN AS ADMIN!
+	Longhorn GUI v2.0
 	By VincentXII""", position = (20, 50), width = 200)
 win.place_column(bt, left = 90 + 200, top = 20)
 win.size = (500, 470)

@@ -2,7 +2,10 @@ def longhorn():
 
 	import subprocess, sys, os, shutil, platform
 
-	print("MAKE SURE THIS IS RUNNING AS ADMIN")
+	print("""RUN AS ADMIN!!!
+		Longhorn CLI v2.0
+		By VincentXII
+		------------------------------""")
 	print("[A] - Remove Default Apps")
 	print("[B] - Block Telemetry")
 	print("[C] - Remove Cortana")
@@ -12,7 +15,7 @@ def longhorn():
 	print("[RS] - Disable Intrusive Services")
 	print("[S] - Setup Longhorn")
 	print("[U] - Disable Windows Update")
-	print("[X] - Exit")
+	print("[X] - Exit Longhorn")
 	while True:
 		choice = input("> ")
 
