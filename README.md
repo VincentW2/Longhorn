@@ -1,4 +1,3 @@
-Go to [Releases page](https://github.com/VincentXII/Longhorn/releases) for stable compiled versions!
 ![Longhorn Logo](http://repo.vincentxii.us/longhorn/longhorn-logo.png)
 
 Longhorn is a windows debloater made in python using powershell scripts. Longhorn was made to run with as little user interaction as possible, all from the included python file and scripts.
