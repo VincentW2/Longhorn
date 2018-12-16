@@ -1,4 +1,4 @@
-import subprocess, sys, os, shutil, platform
+import subprocess, sys, os, shutil, platform 
 from GUI import Window, Button, Label, \
     application
 from GUI.Alerts import note_alert, stop_alert, \
