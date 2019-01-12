@@ -9,14 +9,12 @@ def cortana():
 	print("Please run [C] twice for it to take full effect.\n")
 	note_alert("Cortana Removed Successfully")
 
-
 def defaultapps():
 	p = subprocess.Popen(["powershell.exe",
 		"scripts\\remove-default-apps.ps1"],
 		stdout=sys.stdout)
 	p.communicate()
 	note_alert("Default Apps Removed Successfully")
-
 
 def defender():
 	p = subprocess.Popen(["powershell.exe",
@@ -25,14 +23,12 @@ def defender():
 	p.communicate()
 	note_alert("Windows Defender Disabled Successfully")
 
-
 def onedrive():
 	p = subprocess.Popen(["powershell.exe",
 		"scripts\\remove-onedrive.ps1"], 
 		stdout=sys.stdout)
 	p.communicate()
 	note_alert("Onedrive Uninstalled Sucessfully")
-
 
 def telemetry():
 	p = subprocess.Popen(["powershell.exe",
@@ -41,14 +37,12 @@ def telemetry():
 	p.communicate()
 	note_alert("Telemetry Blocked Successfully")
 
-
 def services():
 	p = subprocess.Popen(["powershell.exe",
        "scripts\\disable-services.ps1"], 
 		stdout=sys.stdout)
 	p.communicate()
 	note_alert("Intrusive Services Disabled Successfully")
-
 
 def setup():
 	p = subprocess.Popen(["powershell.exe",
@@ -95,15 +89,4 @@ win.size = (500, 470)
 win.add(lbl)
 
 win.show()
-
-
-
-
 application().run()
-
-
-
-
-
-
-
