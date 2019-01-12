@@ -1,5 +1,4 @@
 def longhorn():
-
 	import subprocess, sys, os, shutil, platform
 
 	print("""RUN AS ADMIN!!!
@@ -78,4 +77,3 @@ def longhorn():
 		else:
 			longhorn()
 longhorn()
-
