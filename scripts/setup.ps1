@@ -1,3 +1,5 @@
+# Sets up Powershell to run scripts from third parties
+
 #Requires -RunAsAdministrator
 Set-ExecutionPolicy Unrestricted
 ls -Recurse *.ps1 | Unblock-File
