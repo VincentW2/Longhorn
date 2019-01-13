@@ -2,7 +2,7 @@ def longhorn():
 	import subprocess, sys, os, shutil, platform
 
 	print("""RUN AS ADMIN!!!
-		Longhorn CLI v2.0
+		Longhorn CLI v2.1
 		By VincentXII
 		------------------------------""")
 	print("[A] - Remove Default Apps")

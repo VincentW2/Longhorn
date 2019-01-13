@@ -1,9 +1,10 @@
 import subprocess, sys, os, shutil, platform 
-from GUI import Window, Button, Label, \
-    application
-from GUI.Alerts import note_alert, stop_alert, \
-    ask, confirm, ask_or_cancel, confirm_or_cancel
+from VXGUI.StdColors import red
+from VXGUI.Geometry import offset_rect, rect_sized
+from VXGUI import Window, Image, View, Button, Label, application
+from VXGUI.Alerts import note_alert
 
+## Commands ##
 def cortana():
 	p = subprocess.Popen(["scripts\\delCortana.exe"])
 	print("Please run [C] twice for it to take full effect.\n")
@@ -68,7 +69,8 @@ def winupdate():
 def exit():
 	os._exit(0)
 
-win = Window(title = "Longhorn v2.0")
+## The Buttons ##
+win = Window(title = "Longhorn v2.1")
 bt = [
     Button("Disable Cortana", action = cortana),
     Button("Remove Default Apps", action = defaultapps),
@@ -76,17 +78,36 @@ bt = [
     Button("Remove Onedrive", action = onedrive),
     Button("Block Telemetry", action = telemetry),
     Button("Disable Intrusive Services", action = services),
-    Button("Setup Longhorn", action = setup),
     Button("Disable Windows Update", action = winupdate),
+]
+bt2 = [
+    Button("Setup Longhorn", action = setup),
     Button("Windows Information", action = wininfo),
     Button("Exit Longhorn", action = exit),
 ]
-lbl = Label("""RUN AS ADMIN!
-	Longhorn GUI v2.0
-	By VincentXII""", position = (20, 50), width = 200)
-win.place_column(bt, left = 90 + 200, top = 20)
-win.size = (500, 470)
-win.add(lbl)
 
+class ImageTestView(View):
+
+    def draw(self, c, r):
+        #c.backcolor = yellow
+        c.erase_rect(r)
+        main_image_pos = (0, 0)
+        src_rect = (image.bounds)
+        dst_rect = offset_rect(src_rect, main_image_pos)
+        image.draw(c, src_rect, dst_rect)
+
+
+## Label and Image Placement ##
+runadminlbl = Label("RUN AS ADMIN!", color = red, position = (500, 340), width = 200)
+image_path = "lib/longhorn-2.1.png"
+image = Image(file = image_path)
+view = ImageTestView(size = (800,278))
+win.add(view)
+
+## Actually building the window ##
+win.place_column(bt, left = 200, top = 330)
+win.place_column(bt2, left = 500, top = 370)
+win.size = (800, 570)
+win.add(runadminlbl)
 win.show()
 application().run()
