@@ -2,7 +2,7 @@ def longhorn():
 	import subprocess, sys, os, shutil, platform
 
 	print("""RUN AS ADMIN!!!
-		Longhorn CLI v2.1
+		Longhorn CLI v2.1.1
 		By VincentXII
 		------------------------------""")
 	print("[A] - Remove Default Apps")
@@ -31,7 +31,7 @@ def longhorn():
 			p.communicate()
 
 		if choice == "C":
-			p = subprocess.Popen(["scripts\\delCortana.exe"])
+			p = subprocess.Popen(["scripts\\delCortana.bat"])
 			print("Please run [C] twice for it to take full effect.\n")
 
 		if choice == "D":

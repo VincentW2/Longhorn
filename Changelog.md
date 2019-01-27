@@ -1,5 +1,11 @@
 # Longhorn Changelog
 
+Longhorn v2.1.1 - January 27 2019
+------------------------------------
+### Just a quick hotfix
+* delCortana.exe deleted, now both version are using delCortana.bat
+* Cortana should now delete on the latest version of Windows 10
+
 Longhorn v2.1 - January 12 2019
 ------------------------------------
 ### A Whole New Year, A Whole New Look

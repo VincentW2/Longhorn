@@ -6,7 +6,7 @@ from VXGUI.Alerts import note_alert
 
 ## Commands ##
 def cortana():
-	p = subprocess.Popen(["scripts\\delCortana.exe"])
+	p = subprocess.Popen(["scripts\\delCortana.bat"])
 	print("Please run [C] twice for it to take full effect.\n")
 	note_alert("Cortana Removed Successfully")
 
@@ -70,7 +70,7 @@ def exit():
 	os._exit(0)
 
 ## The Buttons ##
-win = Window(title = "Longhorn v2.1")
+win = Window(title = "Longhorn v2.1.1")
 bt = [
     Button("Disable Cortana", action = cortana),
     Button("Remove Default Apps", action = defaultapps),
