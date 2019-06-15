@@ -1,5 +1,5 @@
 import subprocess, sys, os, shutil, platform 
-from VXGUI.StdColors import red
+from VXGUI.StdColors import red, yellow
 from VXGUI.Geometry import offset_rect, rect_sized
 from VXGUI import Window, Image, View, Button, Label, application
 from VXGUI.Alerts import note_alert
@@ -99,6 +99,7 @@ class ImageTestView(View):
 
 ## Label and Image Placement ##
 runadminlbl = Label("RUN AS ADMIN!", color = red, position = (500, 340), width = 200)
+defendernotice = Label("Please run once, restart, and run again.", color = yellow, position = (200, 413), width = 200)
 image_path = "lib/longhorn-2.1.png"
 image = Image(file = image_path)
 view = ImageTestView(size = (800,278))
@@ -109,5 +110,6 @@ win.place_column(bt, left = 200, top = 330)
 win.place_column(bt2, left = 500, top = 370)
 win.size = (800, 570)
 win.add(runadminlbl)
+win.add(defendernotice)
 win.show()
 application().run()
