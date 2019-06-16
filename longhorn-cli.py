@@ -2,7 +2,7 @@ def longhorn():
 	import subprocess, sys, os, shutil, platform
 
 	print("""RUN AS ADMIN!!!
-		Longhorn CLI v2.1.1
+		Longhorn CLI v3.0
 		By VincentXII
 		------------------------------""")
 	print("[A] - Remove Default Apps")
@@ -11,6 +11,7 @@ def longhorn():
 	print("[D] - Disable Windows Defender")
 	print("[I] - Check Windows Info")
 	print("[O] - Remove Onedrive")
+	print("[RP] - Create Restore Point")
 	print("[RS] - Disable Intrusive Services")
 	print("[S] - Setup Longhorn")
 	print("[U] - Disable Windows Update")
@@ -50,7 +51,11 @@ def longhorn():
 	            "scripts\\remove-onedrive.ps1"], 
 	            stdout=sys.stdout)
 			p.communicate()
-
+		if choice == "RP":
+			p = subprocess.Popen(["powershell.exe",
+				"scripts\\create-restore-point.ps1"],
+				stdout=sys.stdout)
+			p.communicate()
 		if choice == "RS": 
 			p = subprocess.Popen(["powershell.exe",
 	            "scripts\\disable-services.ps1"], 

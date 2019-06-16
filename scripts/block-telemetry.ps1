@@ -185,12 +185,12 @@ $domains = @(
     "watson.telemetry.microsoft.com"
     "watson.telemetry.microsoft.com.nsatc.net"
     "wes.df.telemetry.microsoft.com"
-    "m.hotmail.com"
+    #"m.hotmail.com"    # blocks hotmail on mobile
 
     # can cause issues with Skype (#79)
     "apps.skype.com"
     "c.msn.com"
-   #"login.live.com"    # causes issues with logging into
+   #"login.live.com"    # causes issues with logging into hotmail
     "pricelist.skype.com"
     "s.gateway.messenger.live.com"
     "ui.skype.com"

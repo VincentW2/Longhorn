@@ -1,6 +1,6 @@
-![Longhorn Logo](http://repo.vincentxii.us/longhorn/longhorn-2.1.png)
+![Longhorn Logo](http://repo.vincentxii.us/longhorn/longhorn-3.0.png)
 
-Longhorn is a windows debloater made in python using powershell scripts. Longhorn was made to run with as little user interaction as possible, all from the included python file and scripts.
+Longhorn is a windows debloater made in python using powershell scripts. Longhorn was made to run with as little user interaction and fiddiling with powersheel scripts as possible, all from the included python file and scripts.
 
 Longhorn can do these things:
 
@@ -10,15 +10,22 @@ Longhorn can do these things:
 * Remove Default Apps
 * Remove Onedrive
 * Setup Powershell to run files (also known as Setting up Longhorn)
+* Create Restore Points
 
-Longhorn has been tested on Windows 10 Build 1709 and Windows 10 1803 on a wide range of hardware. Your mileage may vary while using lower or higher version numbers.
+Longhorn has been tested and confirmed to work on
+* 1703
+* 1709
+* 1803
+* 1809
+* 1903
+
 
 ## Notice
-Please download all available updates before running this script. If you do not want to update from your current build. Defer feature updates for 365 days in Windows Update > Advanced Settings, and download all cumulative updates. Then disable Windows Update if you wish.
+Please download all available updates before running this script. If you do not want to update from your current build. Defer feature updates for 365 days in Windows Update > Advanced Settings, and download all cumulative updates. 
 
 
 ## Liability
-**There is NO undo to these scripts. Please set a restore point before you run Longhorn!**
+**There is NO undo to these scripts. Please set a restore point with Longhorn before you run**
 
 **Longhorn is provided as is and you use it at your own risk.**
 

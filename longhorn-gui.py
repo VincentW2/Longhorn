@@ -1,13 +1,23 @@
 import subprocess, sys, os, shutil, platform 
-from VXGUI.StdColors import red, yellow
+from VXGUI.StdColors import blue
 from VXGUI.Geometry import offset_rect, rect_sized
-from VXGUI import Window, Image, View, Button, Label, application
+from VXGUI import Window, Image, View, Button, Label, application, Font
 from VXGUI.Alerts import note_alert
 
 ## Commands ##
+def about():
+	note_alert("""Longhorn is a Windows Debloater made by VincentXII.\n
+Please read the included "README.md" for more information on Longhorn""")
+
+def changelog():
+	p = subprocess.Popen(["notepad.exe",
+		"CHANGELOG.md"],
+		stdout=sys.stdout)
+
 def cortana():
 	p = subprocess.Popen(["scripts\\delCortana.bat"])
-	print("Please run [C] twice for it to take full effect.\n")
+	p = subprocess.Popen(["scripts\\delCortana.bat"])
+	p = subprocess.Popen(["scripts\\delCortana.bat"])
 	note_alert("Cortana Removed Successfully")
 
 def defaultapps():
@@ -18,6 +28,7 @@ def defaultapps():
 	note_alert("Default Apps Removed Successfully")
 
 def defender():
+	note_alert("Please run this once, restart, and run this again for it to work.")
 	p = subprocess.Popen(["powershell.exe",
 		"scripts\\disable-windows-defender.ps1"],
 		stdout=sys.stdout)
@@ -37,6 +48,13 @@ def telemetry():
 		stdout=sys.stdout)
 	p.communicate()
 	note_alert("Telemetry Blocked Successfully")
+
+def restorepoint():
+	p = subprocess.Popen(["powershell.exe",
+		"scripts\\create-restore-point.ps1"],
+		stdout=sys.stdout)
+	p.communicate()
+	note_alert("Created Restore Point")
 
 def services():
 	p = subprocess.Popen(["powershell.exe",
@@ -70,8 +88,8 @@ def exit():
 	os._exit(0)
 
 ## The Buttons ##
-win = Window(title = "Longhorn v2.1.1")
-bt = [
+win = Window(title = "Łonghorn v3.0")
+longhorn = [
     Button("Disable Cortana", action = cortana),
     Button("Remove Default Apps", action = defaultapps),
     Button("Disable Windows Defender", action = defender),
@@ -80,10 +98,15 @@ bt = [
     Button("Disable Intrusive Services", action = services),
     Button("Disable Windows Update", action = winupdate),
 ]
-bt2 = [
+misc = [
     Button("Setup Longhorn", action = setup),
     Button("Windows Information", action = wininfo),
-    Button("Exit Longhorn", action = exit),
+    Button("Create Restore Point", action = restorepoint),
+]
+info = [
+	Button("About Longhorn", action = about),
+	Button("Changelog", action = changelog),
+	Button("Exit Longhorn", action = exit),
 ]
 
 class ImageTestView(View):
@@ -98,18 +121,22 @@ class ImageTestView(View):
 
 
 ## Label and Image Placement ##
-runadminlbl = Label("RUN AS ADMIN!", color = red, position = (500, 340), width = 200)
-defendernotice = Label("Please run once, restart, and run again.", color = yellow, position = (200, 413), width = 200)
-image_path = "lib/longhorn-2.1.png"
+longhornbt = Label("Longhorn Features", color = blue, position = (50, 300))
+miscbt = Label("Miscellaneous", color = blue, position = (300, 340))
+infobt = Label("Information", color = blue, position = (500, 340))
+
+image_path = "lib/longhorn-3.0.png"
 image = Image(file = image_path)
 view = ImageTestView(size = (800,278))
 win.add(view)
 
 ## Actually building the window ##
-win.place_column(bt, left = 200, top = 330)
-win.place_column(bt2, left = 500, top = 370)
+win.place_column(longhorn, left = 50, top = 330)
+win.place_column(misc, left = 300, top = 370)
+win.place_column(info, left = 500, top = 370)
 win.size = (800, 570)
-win.add(runadminlbl)
-win.add(defendernotice)
+win.add(longhornbt)
+win.add(miscbt)
+win.add(infobt)
 win.show()
 application().run()
