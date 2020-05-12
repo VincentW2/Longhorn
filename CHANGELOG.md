@@ -30,10 +30,10 @@ Longhorn v2.1 - January 12th 2019
 * Longhorn GUI v2.1 brings a much cleaner layout
 
 #### Old Longhorn GUI
-![Old Longhorn Layout](https://upload.vincentxii.us/images/ej0h.png)
+![Old Longhorn Layout](https://i.ibb.co/ZNrYPPC/ej0h.png)
 
 #### New Longhorn GUI
-![New Longhorn Layout](https://upload.vincentxii.us/images/6l1q.png)
+![New Longhorn Layout](https://i.ibb.co/HGCmqw2/6l1q.png)
 
 ### Under the Hood
 * Longhorn GUI is now built with VXGui instead of PyGUI
