@@ -2,7 +2,7 @@ Longhorn is now deprecated. Please use https://github.com/VincentXII/LonghornX f
 
 ![Longhorn Logo](https://i.ibb.co/9Nb6G1V/longhorn-3-0-transparent.png)
 
-Longhorn is a windows debloater made in python using powershell scripts. Longhorn was made to run with as little user interaction and fiddiling with powersheel scripts as possible, all from the included python file and scripts.
+Longhorn is a windows debloater made in python using powershell scripts. Longhorn was made to run with as little user interaction and fiddiling with powershell scripts as possible, all from the included python file and scripts.
 
 Longhorn can do these things:
 
