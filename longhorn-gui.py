@@ -70,7 +70,7 @@ def setup():
 		"scripts\\setup.ps1"], 
 		stdout=sys.stdout)
 	p.communicate()
-	note_alert("You are now ready to debloat Windows 10")
+	note_alert("Longhorn Succesfully Setup")
 
 def wininfo():
 	print("----------Windows Info------------")
@@ -88,7 +88,7 @@ def exit():
 	os._exit(0)
 
 ## The Buttons ##
-win = Window(title = "Łonghorn v3.0")
+win = Window(title = "Łonghorn v3.1 FINAL")
 longhorn = [
     Button("Disable Cortana", action = cortana),
     Button("Remove Default Apps", action = defaultapps),
@@ -108,17 +108,15 @@ info = [
 	Button("Changelog", action = changelog),
 	Button("Exit Longhorn", action = exit),
 ]
-
-class ImageTestView(View):
+class LonghornHeaderImageDisplay(View):
 
     def draw(self, c, r):
-        #c.backcolor = yellow
+
         c.erase_rect(r)
         main_image_pos = (0, 0)
         src_rect = (image.bounds)
         dst_rect = offset_rect(src_rect, main_image_pos)
         image.draw(c, src_rect, dst_rect)
-
 
 ## Label and Image Placement ##
 longhornbt = Label("Longhorn Features", color = blue, position = (50, 300))
@@ -127,9 +125,24 @@ infobt = Label("Information", color = blue, position = (500, 340))
 
 image_path = "lib/longhorn-3.0.png"
 image = Image(file = image_path)
-view = ImageTestView(size = (800,278))
+view = LonghornHeaderImageDisplay(size = (800,278))
 win.add(view)
 
+## Deprecation Statement ##
+depalert = Window(title = "Attention!")
+class DepAlertDisplay(View):
+
+    def draw(self, d, e):
+
+        d.erase_rect(e)
+        main_image_pos2 = (0, 0)
+        src_rect2 = (imagedep.bounds)
+        dst_rect2 = offset_rect(src_rect2, main_image_pos2)
+        imagedep.draw(d, src_rect2, dst_rect2)
+image_path2 = "lib/depalert.png"
+imagedep = Image(file = image_path2)
+viewdep = DepAlertDisplay(size = (500,375))
+depalert.add(viewdep)
 ## Actually building the window ##
 win.place_column(longhorn, left = 50, top = 330)
 win.place_column(misc, left = 300, top = 370)
@@ -139,4 +152,6 @@ win.add(longhornbt)
 win.add(miscbt)
 win.add(infobt)
 win.show()
+depalert.size = (500,375)
+depalert.show()
 application().run()

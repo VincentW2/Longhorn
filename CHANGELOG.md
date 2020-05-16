@@ -1,4 +1,19 @@
 # Longhorn Changelog
+
+Longhorn v3.1 FINAL - May 16th 2020
+-----------------------------------
+11 Months Since Last Release and Since Last Major Release
+
+This is the final release of Longhorn. For futhur development, look here: https://github.com/VincentXII/LonghornX
+
+### Deprecation
+* Longhorn now alerts you that it is deprecated
+
+### Minor Changes
+* Wording changes on Setup Longhorn
+* Some minor useless code has been removed
+
+
 Longhorn v3.0 - June 16th 2019
 -----------------------------------
 5 Months Since Last Release

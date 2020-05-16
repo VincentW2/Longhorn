@@ -1,4 +1,6 @@
-![Longhorn Logo](https://i.ibb.co/kJz73mF/longhorn-2-1.png)
+Longhorn is now deprecated. Please use https://github.com/VincentXII/LonghornX for better performance and latest updates. 
+
+![Longhorn Logo](hhttps://i.ibb.co/9Nb6G1V/longhorn-3-0-transparent.png)
 
 Longhorn is a windows debloater made in python using powershell scripts. Longhorn was made to run with as little user interaction and fiddiling with powersheel scripts as possible, all from the included python file and scripts.
 
